@@ -1,0 +1,10 @@
+# Результаты сборки (ISO публикуется в Releases, а не в репозитории)
+build/
+
+# Служебные файлы запуска
+boot_stdout.txt
+boot_stderr.txt
+
+# Python
+__pycache__/
+*.pyc
