@@ -197,7 +197,12 @@ def build_path_tables():
 README = (
     "fhOS - a minimal x86 operating system written in NASM.\r\n"
     "\r\n"
-    "BOOT.IMG is the El Torito boot image (stage 1 + kernel).\r\n"
+    "Graphical shell (VGA mode 13h, 320x200) with a top taskbar,\r\n"
+    "two themes (dark/light) and an in-memory filesystem.\r\n"
+    "Boots from the El Torito boot image (stage 1 + kernel).\r\n"
+    "\r\n"
+    "Commands: help clear about ver echo theme time mem color\r\n"
+    "          ls cat write touch rm fsinfo beep reboot halt\r\n"
 )
 
 
