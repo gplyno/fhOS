@@ -242,10 +242,12 @@ get_font:
 .copy:
     mov ax, 0x1000
     mov es, ax
-    mov ds, [font_seg]
-    mov si, [font_off]
+    mov ds, ax                 ; DS = сегмент ядра
+    mov si, [font_off]         ; читаем смещение шрифта ДО смены DS
     mov di, font_buf
     mov cx, 512                ; 512 слов = 1024 байта (128 символов)
+    mov ax, [font_seg]
+    mov ds, ax                 ; DS = сегмент шрифта
     cld
     rep movsw
     pop es
